@@ -36,9 +36,15 @@
                 <h2>{{errorMessage}}</h2>
             </div>
             <div class="container tasks">
-                <ul>
+
+                <h2 v-if="taskList.length === 0">Non ci sono task da completare!<i class="fa-regular fa-paper-plane" style="color: #ffffff;"></i></h2>
+
+                <ul v-if="taskList.length > 0">
                     <li v-for="(task,index) in taskList" @click="task.flag = !task.flag ,log(task,index)">
-                        <span :class="task.flag ? 'lineTrought' : ''">{{task.message}}</span>
+                        <div class="task-style">
+                            <span :class="task.flag ? 'lineTrought' : ''">{{task.message}}</span>
+                            <img v-if="task.flag" src="assets/img/Todo.png" alt="">
+                        </div>
                         <i @click.stop="deleteTask(task,index)" class="fa-regular fa-trash-can"></i>
                     </li>
 
