@@ -16,7 +16,8 @@ createApp({
                 message: 'Pushare il commit',
                 flag : false,
             },
-           ]
+           ],
+           errorMessage : "",
         }
     },
     methods: {
@@ -27,8 +28,16 @@ createApp({
         deleteTask(task,index){
             if (task.flag) {
                 this.taskList.splice(index,1);
+                this.errorMessage = "Task rimossa con successo !"
+                setTimeout(() => {
+                    this.errorMessage = ""
+                }, 2000);
+
             }else{
-                console.warn("Devi prima contrassegnare la task !!");
+                this.errorMessage = "Devi prima contrassegnare la task !!"
+                setTimeout(() => {
+                    this.errorMessage = ""
+                }, 2000);
             }
         }
     }
