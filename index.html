@@ -18,8 +18,10 @@
 
         <header>
             <div class="container">
-                <input  v-model="newMessageTask" type="text" placeholder="Inserisci una nuova task">
-                <button @click="log(),createNewObj()">Aggiungi</button>
+                <input  v-model.trim="newMessageTask" type="text" placeholder="Inserisci una nuova task"
+                @keyup.enter="createNewObj()">
+                <button
+                  @click="createNewObj()">Aggiungi</button>
             </div>
         </header>
 

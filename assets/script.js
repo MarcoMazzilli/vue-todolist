@@ -45,7 +45,15 @@ createApp({
                 message : this.newMessageTask,
                 flag : false
             }
-            this.taskList.unshift(obj)
+            if (this.newMessageTask.length >= 5) {
+                this.taskList.unshift(obj)
+                this.newMessageTask = ""
+            }else {
+                this.errorMessage = "La task deve contenere almeno 5 caratteri"
+                setTimeout(() => {
+                    this.errorMessage = ""
+                }, 2000);
+            }
 
         }
     }
