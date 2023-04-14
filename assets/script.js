@@ -23,6 +23,13 @@ createApp({
         log(task,index){
             console.log("mi hai cliccato", index)
             console.log(task.flag)
+        },
+        deleteTask(task,index){
+            if (task.flag) {
+                this.taskList.splice(index,1);
+            }else{
+                console.warn("Devi prima contrassegnare la task !!");
+            }
         }
     }
 

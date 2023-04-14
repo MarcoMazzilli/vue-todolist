@@ -28,7 +28,7 @@
                 <ul>
                     <li v-for="(task,index) in taskList" @click="task.flag = !task.flag ,log(task,index)">
                         <span :class="task.flag ? 'lineTrought' : ''">{{task.message}}</span>
-                        <i class="fa-regular fa-trash-can"></i>
+                        <i @click.stop="deleteTask(task,index)" class="fa-regular fa-trash-can"></i>
                     </li>
 
                 </ul>
