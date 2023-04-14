@@ -6,19 +6,38 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(13, 17, 23)
 }
 
 h2 {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
 }
 
 .container.message {
-    height: 30px;
+margin: 40px auto;
+height: 30px;
 }
 
+.container.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.container.logo img {
+    height: 70px;
+}
+
+.container.logo span {
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+}
 header{
     text-align: center;
     margin-top: 25px;
@@ -32,10 +51,10 @@ header input {
     margin: 0px 20px;
     font-size: 1.3rem;
     border: none;
-    border: 1px solid black
+    border: 1px solid rgb(201, 201, 201);
 }
 header input:focus{
-    border: 1px solid black;
+    border: 1px solid rgb(67, 168, 238);
 }
 
 header button {
@@ -45,9 +64,10 @@ header button {
     border: 1px solid black;
     font-size: 1.3rem;
     background-color: white;
+    border: 1px solid rgb(201, 201, 201);
 }
 header button:hover {
-    background-color: lightgreen;
+    background-color: rgb(67, 168, 238);
     color: white;
 }
 
@@ -61,7 +81,8 @@ header button:hover {
     list-style: none;
     padding: 20px;
     border-radius: 10px;
-    border:1px solid black;
+    box-shadow: 0px 0px 15px rgb(24, 90, 189);
+    border: 1px solid rgb(67, 168, 238);
 }
 
 .container.tasks ul li {
@@ -69,9 +90,11 @@ header button:hover {
     justify-content: space-between;
     font-size: 1.5rem;
     padding: 20px;
-    margin: 5px;
+    margin: 10px;
     border-radius: 10px;
     box-shadow: 1px 1px 2px rgb(201, 201, 201);
+    background-color: rgb(48, 54, 61);
+    color: white;
     cursor: pointer;
 }
 

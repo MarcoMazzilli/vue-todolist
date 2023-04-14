@@ -17,12 +17,18 @@
     <div id="app">
 
         <header>
+            <div class="container logo">
+                <img src="assets/img/Todo.png" alt="">
+                <span>ToDolist</span>
+            </div>
+
             <div class="container">
                 <input  v-model.trim="newMessageTask" type="text" placeholder="Inserisci una nuova task"
                 @keyup.enter="createNewObj()">
                 <button
                   @click="createNewObj()">Aggiungi</button>
             </div>
+
         </header>
 
         <main>
