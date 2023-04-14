@@ -18,12 +18,12 @@ createApp({
             },
            ],
            errorMessage : "",
+           newMessageTask : "",
         }
     },
     methods: {
-        log(task,index){
-            console.log("mi hai cliccato", index)
-            console.log(task.flag)
+        log(){
+            console.log("mi hai cliccato")
         },
         deleteTask(task,index){
             if (task.flag) {
@@ -39,6 +39,14 @@ createApp({
                     this.errorMessage = ""
                 }, 2000);
             }
+        },
+        createNewObj(){
+            const obj = {
+                message : this.newMessageTask,
+                flag : false
+            }
+            this.taskList.unshift(obj)
+
         }
     }
 
